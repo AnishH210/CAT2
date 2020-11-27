@@ -20,22 +20,22 @@
 <div class="form">
 	<form class="create" name="register" onsubmit="return validateform()" method="post">
 		<h2>Registration Form</h2><br>
-		Name <input type="text" input id="Name" type="name" placeholder="Name"><br>
-		Email <input id="email" placeholder="Email ID"><br>
-		Branch <input id="branch" placeholder="Branch"><br>
-		College/University Name<input id="Cname" placeholder="College/University Name"><br>
-		State <input id="state" placeholder="State"><br>
-		Address <input id="Add" placeholder="Address"><br>
+		Name <input input id="Name" type="name" placeholder="Name"><br>
+		Email <input id="email" type="text"placeholder="Email ID"><br>
+		Branch <input id="branch" type="text"placeholder="Branch"><br>
+		College/University Name<input id="Cname" type="text" placeholder="College/University Name"><br>
+		State <input id="state" type="text" placeholder="State"><br>
+		Address <input id="Add" type="text" placeholder="Address"><br>
 		Age <input id="Age" type="number" placeholder="Age"><br>
-		Phone Number <input id="Phno" placeholder="Phone Number"><br>
-		Username <input id="Uname" placeholder="Username"><br>
-		Password <input id="Pwrd" type="password" placeholder="Password"><br>
-		<button class="btn" onclick="register()">Register</button><br><br>
+		Phone Number <input id="Phno" type="text" placeholder="Phone Number"><br>
+		Username <input id="Uname" type="text" placeholder="Username"><br>
+		Password <input id="Pwrd" type="text" type="password" placeholder="Password"><br>
+		<button class="btn" onclick="registerF()">Register</button><br><br>
 	</form>
 </div>
 <script>
 
-function register() {
+function registerF() {
 	var n = document.forms["register"]["Name"].value;
 	var em = document.forms["register"]["email"].value;
 	var b = document.forms["register"]["branch"].value;
