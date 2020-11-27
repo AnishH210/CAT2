@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>CAT 2 Validation</title>
 </head>
-<body>
+<body onload="loadXML()">
 <div>
 	<h1>CAT 2 Validation</h1>
 </div>
@@ -17,8 +17,8 @@
 		<input id="Cname" placeholder="College/University Name"><br>
 		<input id="state" placeholder="State"><br>
 		<input id="Add" placeholder="Address"><br>
-		<input id="Age" placeholder="Age"><br>
-		<input id="Phno" placeholder="Phone Number"><br>
+		<input id="Age" type="number" placeholder="Age"><br>
+		<input id="Phno" type="number"placeholder="Phone Number"><br>
 		<input id="Uname" placeholder="Username"><br>
 		<input id="Pwrd" placeholder="Password"><br>
 		<button class="btn" onclick="register()">Register</button><br><br>
@@ -36,10 +36,9 @@ function register() {
 	var ph = document.forms["register"]["Phno"].value;
 	var un = document.forms["register"]["Uname"].value;
 	var pwd = document.forms["register"]["pwrd"].value;
-	if( n == "" || typeof n !== "string" ) {
+	if( n == "" || name!=true ) {
             alert( "Please provide your Name!" );
          }
-
     if( x == "" || typeof u !== "string" ) {
             alert( "Please provide your email!" );
          }
@@ -53,8 +52,44 @@ function register() {
          }
     if (isNaN(v) || v<999999999 || v>9999999999) {
 		alert("Enter Valid Phone Number");
-	}
 
+	}
 
 }
 </script>
+<script>
+        function loadXML()
+        {
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4&&this.status==200)
+                {
+                    myFunction(this);
+                }
+            };
+            xhttp.open("GET","detail.xml",false);
+            xhttp.send();
+        }
+        function myFunction(xml)
+        {
+            var i;
+            var xmlDoc=xml.responseXML;
+            var t="<tr><th>   Student Name   </th><th>    Branch    </th><th>  College  </th><th>   Email  </th></tr>";
+            var x=xmlDoc.getElementsByTagName("PC");
+            for(i=0;i<x.length;i++)
+            {
+                t +="<tr><td>" +
+                x[i].getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("STU-BRANCH")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("STU-COLLEGE")[0].childNodes[0].nodeValue +
+                "</td><td>" +
+                x[i].getElementsByTagName("STU-EMAIL")[0].childNodes[0].nodeValue +
+                "</td><tr>" +
+            }
+
+            document.getElementById("demo").innerHTML=t;
+        }
+    </script>
