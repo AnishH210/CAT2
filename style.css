@@ -2,6 +2,6 @@
 body{
 	font-family: 'Raleway',sans-serif;
 }
-#DOM{
+#DOM th td{
 	background: green;
 }
