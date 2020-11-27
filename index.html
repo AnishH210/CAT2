@@ -46,7 +46,7 @@ function register() {
 	var ph = document.forms["register"]["Phno"].value;
 	var un = document.forms["register"]["Uname"].value;
 	var pwd = document.forms["register"]["pwrd"].value;
-	if( n == "" || name!=true ) {
+	if( n == "" || typeof n !== "string" ) {
             alert( "Please provide your Name!" );
          }
     if( x == "" || typeof u !== "string" ) {
