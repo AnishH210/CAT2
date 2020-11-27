@@ -46,23 +46,35 @@ function registerF() {
 	var ph = document.forms["register"]["Phno"].value;
 	var un = document.forms["register"]["Uname"].value;
 	var pwd = document.forms["register"]["pwrd"].value;
-	if( n == "" || typeof n !== "string" ) {
-            alert( "Please provide your Name!" );
+	if( n == "" || n == null ) {
+        alert( "Please provide your Name!" );
          }
-    if( x == "" || typeof u !== "string" ) {
-            alert( "Please provide your email!" );
+    if( em == "" ) {
+        alert( "Please provide your email!" );
          }
-
-    if( z == "" || typeof u !== "string" ) {
-            alert( "Please provide your Username!" );
+    if( b == "" || b == null ) {
+        alert( "Please provide the Branchname" );
          }
-
-    if( w == "" ) {
-            alert( "Please provide a Password!" );
+    if( cn == "" || cn == null) {
+        alert( "Please provide the University name" );
          }
-    if (isNaN(v) || v<999999999 || v>9999999999) {
+    if( s == "" || s == null) {
+    	alert ("Please provide a state");
+    }
+    if( add == "" || add == null) {
+    	alert("Please Provide the address");
+    }
+    if(isNaN(age) || age<0 || age == "") {
+    	alert("Enter a valid age")
+    }
+    if (isNaN(ph) || ph == "" || ph<999999999 || ph>9999999999 ||) {
 		alert("Enter Valid Phone Number");
-
+	}
+	if ( un == "" || un == null) {
+		alert("Please Enter username");
+	}
+	if ( pwd == null) {
+		alert("Enter a password");
 	}
 
 }
