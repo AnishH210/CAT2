@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CHRIST>
+	<CS>
+		<STU-NAME>Ananya K</STU-NAME>
+		<STU-BRANCH>Kozikhode</STU-BRANCH>
+		<STU-COLLEGE>MVSA</STU-COLLEGE>
+		<STU-EMAIL>ananyak@mvsa.in</STU-EMAIL>
+	</CS>
+	<CS>
+		<STU-NAME>Andrew S</STU-NAME>
+		<STU-BRANCH>Chennai</STU-BRANCH>
+		<STU-COLLEGE>Josephs</STU-COLLEGE>
+		<STU-EMAIL>andrews@jsphs.in</STU-EMAIL>
+	</CS>
+	<CS>
+		<STU-NAME>Rahul C</STU-NAME>
+		<STU-BRANCH>Bangalore north</STU-BRANCH>
+		<STU-COLLEGE>MVJ</STU-COLLEGE>
+		<STU-EMAIL>RhlChugani@MVJ.in</STU-EMAIL>
+	</CS>
+</CHRIST>
