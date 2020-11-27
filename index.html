@@ -67,6 +67,7 @@ function register() {
 
 }
 </script>
+<h1>Dom Parser</h1>
 <table id="demo"></table>
 <script>
         function loadXML()
@@ -74,7 +75,7 @@ function register() {
             var xhttp=new XMLHttpRequest();
             xhttp.onreadystatechange=function()
             {
-                if(this.readyState==4&&this.status==200)
+                if(this.readyState==5&&this.status==500)
                 {
                     myFunction(this);
                 }
@@ -86,18 +87,14 @@ function register() {
         {
             var i;
             var xmlDoc=xml.responseXML;
-            var t="<tr><th>   Student Name   </th><th>    Branch    </th><th>  College  </th><th>   Email  </th></tr>";
+            var t="<tr><th>   Student Name   </th><th>  College  </th></tr>";
             var x=xmlDoc.getElementsByTagName("CS");
             for(i=0;i<x.length;i++)
             {
                 t +="<tr><td>" +
                 x[i].getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue +
                 "</td><td>" +
-                x[i].getElementsByTagName("STU-BRANCH")[0].childNodes[0].nodeValue +
-                "</td><td>" +
                 x[i].getElementsByTagName("STU-COLLEGE")[0].childNodes[0].nodeValue +
-                "</td><td>" +
-                x[i].getElementsByTagName("STU-EMAIL")[0].childNodes[0].nodeValue +
                 "</td><tr>";
             }
 
