@@ -67,7 +67,7 @@ function register() {
 
 }
 </script>
-<h1>Dom Parser</h1>
+<h2>Dom Parser</h2>
 <table id="demo"></table>
 <script>
         function loadXML()
@@ -75,7 +75,7 @@ function register() {
             var xhttp=new XMLHttpRequest();
             xhttp.onreadystatechange=function()
             {
-                if(this.readyState==5&&this.status==500)
+                if(this.readyState==4&&this.status==200)
                 {
                     myFunction(this);
                 }
